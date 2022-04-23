@@ -5,7 +5,7 @@ export default function Home({photos}) {
   return (
     <div>
       <Head>
-        <title>Photo Gallery - Nemanja Radivojevic</title>
+        <title>Fetch API Photos - Nemanja Radivojevic</title>
         <meta name="description" content="Fetching data from API" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

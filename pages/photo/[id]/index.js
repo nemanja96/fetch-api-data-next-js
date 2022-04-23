@@ -3,11 +3,14 @@ import styles from '../../../styles/Photo.module.css';
 
 export default function photo({photo}) {
     return (
-        <div className={styles.singleCard}>
-            <h2>{photo.title}</h2>
-            <img src={photo.url} />
-            <br />
-            <Link href="/">Go Back</Link>
+        <div className={styles.grid}>
+            <div className={styles.singlePhotoCard}>
+                <img src={photo.url} />
+                <div>
+                    <h2>{photo.title}</h2>
+                    <Link href="/">Go Back</Link>
+                </div>
+            </div>
         </div>
     )
 }
@@ -35,14 +38,3 @@ export const getStaticPaths = async () => {
         fallback: false
     }
 }
-
-// export const getServerSideProps = async (context) => {
-//     const res = await fetch(`https://jsonplaceholder.typicode.com/photos/${context.params.id}`);
-//     const photo = await res.json();
-
-//     return{
-//         props: {
-//             photo
-//         }
-//     }
-// }

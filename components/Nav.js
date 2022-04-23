@@ -5,13 +5,16 @@ export default function Nav() {
     return (
         <nav className={styles.nav}>
             <div>
-                <h3>Hello</h3>
+                <Link href="/">Fetch API</Link>
                 <ul>
                     <li>
-                        <Link href='/'>Home</Link>
+                        <Link href='/'>Photos</Link>
                     </li>
                     <li>
-                        <Link href='/about'>About</Link>
+                        <Link href='/users'>Users</Link>
+                    </li>
+                    <li>
+                        <Link href='/comments'>Comments</Link>
                     </li>
                 </ul>
             </div>

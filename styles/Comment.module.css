@@ -1,0 +1,53 @@
+.grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+@media (max-width: 600px) {
+    .grid {
+      width: 100%;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+  }
+
+.commentCard{
+    flex: 1;
+    min-width: 31.33%;
+    margin: 1%;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: .3s all;
+    cursor: pointer;
+}
+
+.commentCard:hover{
+    background-color: #4170f5;
+    color: #fff;
+}
+
+.commentSingleCard{
+    padding: 0 20px;
+    text-align: center;
+}
+
+.commentSingleCard a{
+    display: block;
+    width: 150px;
+    height: 60px;
+    background-color: #0070f3;
+    color: #fff;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+    transition: .3s all;
+    margin: 0 auto;
+  }
+
+  .commentSingleCard a:hover{
+    background-color: #4170f5;
+  }

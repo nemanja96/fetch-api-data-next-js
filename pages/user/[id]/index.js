@@ -1,7 +1,21 @@
+import styles from '../../../styles/User.module.css';
+import Link from 'next/link';
+
 export default function user({post}) {
     return (
-        <div>
-            {post.name}
+        <div className={styles.grid}>
+            <div className={styles.userCard}>
+                <h2>Name: {post.name}</h2>
+                <p>Username: {post.username}</p>
+                <p>Email: {post.email}</p>
+                <p>Street: {post.address.street}</p>
+                <p>Suite: {post.address.suite}</p>
+                <p>City: {post.address.city}</p>
+                <p>Zipcode: {post.address.zipcode}</p>
+                <p>Phone: {post.phone}</p>
+                <p>Website: {post.website}</p>
+                <Link href="/users">Go back</Link>
+            </div>
         </div>
     )
 }

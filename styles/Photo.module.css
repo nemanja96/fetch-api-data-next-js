@@ -1,12 +1,11 @@
 .grid {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     max-width: 800px;
   }
   
-  .card {
+  .photoCard {
     margin: 1rem;
     padding: 1.5rem;
     text-align: left;
@@ -14,26 +13,26 @@
     text-decoration: none;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
-    max-width: 300px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     flex: 1;
+    cursor: pointer;
   }
   
-  .card:hover,
-  .card:focus,
-  .card:active {
+  .photoCard:hover,
+  .photoCard:focus,
+  .photoCard:active {
     color: #0070f3;
     border-color: #0070f3;
     cursor: pointer;
   }
   
-  .card h2 {
+  .photoCard h2 {
     margin: 0 0 1rem 0;
     font-size: 1.5rem;
     text-align: center;
   }
   
-  .card p {
+  .photoCard p {
     margin: 0;
     font-size: 1.25rem;
     line-height: 1.5;
@@ -50,3 +49,59 @@
       flex-direction: column;
     }
   }
+
+  /* Single Photo Card */
+  .singlePhotoCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .singlePhotoCard div{
+    flex: 1;
+    padding: 0 40px;
+  }
+
+  .singlePhotoCard div h2{
+    padding-bottom: 20px;
+  }
+
+  .singlePhotoCard div a{
+    display: block;
+    width: 150px;
+    height: 60px;
+    background-color: #0070f3;
+    color: #fff;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+    transition: .3s all;
+  }
+
+  .singlePhotoCard div a:hover{
+    background-color: #4170f5;
+  }
+
+  .singlePhotoCard img{
+    width: 50%;
+    flex: 1;
+  }
+
+  @media (max-width: 600px) {
+    .singlePhotoCard {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .singlePhotoCard div h2{
+      text-align: center;
+      padding-bottom: 0px;
+    }
+
+    .singlePhotoCard a{
+      margin: 0 auto;
+    }
+  }
+
+  /* Single User Card */
